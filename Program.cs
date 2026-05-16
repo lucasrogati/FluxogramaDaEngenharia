@@ -1,35 +1,45 @@
 ﻿Console.WriteLine("--- Fluxograma da Engenharia ---");
-Console.WriteLine("O objeto está se movendo (S/N)?");
 
-string movendo = Console.ReadLine()!;
+Console.Write("O objeto está se movendo (S/N)? ");
+string movendo = Console.ReadLine()!.ToUpper().Substring(0,1);
 
 if (movendo == "S")
 {
-    Console.WriteLine("Deveria (S/N)?");
+    Console.Write("Deveria estar se movendo (S/N)? ");
+    string deveriaMover = Console.ReadLine()!.ToUpper().Substring(0,1);;
 
-    string deveriamover = Console.ReadLine()!;
-
-    if (deveriamover == "S")
+    if (deveriaMover == "S")
     {
-        Console.WriteLine("Ótimo");
+        Console.WriteLine("Ótimo!");
     }
-    else if (deveriamover == "N")
+    else if (deveriaMover == "N")
     {
         Console.WriteLine("Use silver tape!");
+    }
+    else
+    {
+        Console.WriteLine("Resposta inválida.");
     }
 }
 else if (movendo == "N")
 {
-    Console.WriteLine("Deveria (S/N)?");
+    Console.Write("Deveria estar se movendo (S/N)? ");
+    string deveriaMover = Console.ReadLine()!.ToUpper().Substring(0,1);;
 
-    string deveria = Console.ReadLine()!;
-
-    if (deveria == "S")
+    if (deveriaMover == "S")
     {
-        Console.WriteLine("Use WD-40");
+        Console.WriteLine("Use WD-40!");
     }
-    else if (deveria == "N")
+    else if (deveriaMover == "N")
     {
-        Console.WriteLine("Ótimo");
+        Console.WriteLine("Ótimo!");
     }
+    else
+    {
+        Console.WriteLine("Resposta inválida.");
+    }
+}
+else
+{
+    Console.WriteLine("Resposta inválida.");
 }
